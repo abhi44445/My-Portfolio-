@@ -1,0 +1,120 @@
+.projects {
+  padding: var(--space-6xl) 0;
+  background-color: var(--color-background);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4xl);
+}
+
+.header {
+  max-width: var(--content-narrow);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.header h2 {
+  font-family: var(--font-display);
+  font-size: var(--text-6xl);
+  font-weight: 400;
+  color: var(--color-foreground);
+  margin: 0;
+}
+
+.header p {
+  font-size: var(--text-lg);
+  line-height: 1.6;
+  color: var(--color-muted);
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: var(--space-3xl);
+  margin-top: var(--space-2xl);
+}
+
+.footer {
+  margin-top: var(--space-3xl);
+  padding-top: var(--space-3xl);
+  border-top: 1px solid var(--color-border);
+  text-align: center;
+}
+
+.footerText {
+  font-size: var(--text-base);
+  color: var(--color-muted);
+  margin: 0;
+}
+
+.footerLink {
+  color: var(--color-foreground);
+  font-weight: 500;
+  text-decoration: none;
+  position: relative;
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.footerLink::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: var(--color-accent);
+  transform: scaleX(0);
+  transition: transform var(--duration-normal) var(--ease-out);
+}
+
+.footerLink:hover {
+  color: var(--color-accent);
+}
+
+.footerLink:hover::after {
+  transform: scaleX(1);
+}
+
+/* Responsive design */
+@media (max-width: 968px) {
+  .header h2 {
+    font-size: var(--text-5xl);
+  }
+  
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--space-2xl);
+  }
+}
+
+@media (max-width: 640px) {
+  .projects {
+    padding: var(--space-4xl) 0;
+  }
+  
+  .content {
+    gap: var(--space-3xl);
+  }
+  
+  .header h2 {
+    font-size: var(--text-4xl);
+  }
+  
+  .header p {
+    font-size: var(--text-base);
+  }
+  
+  .grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+  
+  .footer {
+    margin-top: var(--space-2xl);
+    padding-top: var(--space-2xl);
+  }
+}

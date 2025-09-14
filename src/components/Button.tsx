@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import styles from './Button.module.css';
 
 export interface ButtonProps {
@@ -13,45 +13,51 @@ export interface ButtonProps {
   type?: 'button' | 'submit' | 'reset';
 }
 
-export const Button: React.FC<ButtonProps> = ({
-  children,
-  variant = 'primary',
-  size = 'md',
-  onClick,
-  href,
-  target,
-  disabled = false,
-  className = '',
-  type = 'button',
-}) => {
-  const classes = [
-    styles.button,
-    styles[variant],
-    styles[size],
-    className,
-  ].join(' ');
+export const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(
+  ({
+    children,
+    variant = 'primary',
+    size = 'md',
+    onClick,
+    href,
+    target,
+    disabled = false,
+    className = '',
+    type = 'button',
+  }, ref) => {
+    const classes = [
+      styles.button,
+      styles[variant],
+      styles[size],
+      className,
+    ].join(' ');
 
-  if (href) {
+    if (href) {
+      return (
+        <a
+          ref={ref as React.Ref<HTMLAnchorElement>}
+          href={href}
+          target={target}
+          className={classes}
+          aria-disabled={disabled}
+        >
+          {children}
+        </a>
+      );
+    }
+
     return (
-      <a
-        href={href}
-        target={target}
+      <button
+        ref={ref as React.Ref<HTMLButtonElement>}
+        type={type}
+        onClick={onClick}
+        disabled={disabled}
         className={classes}
-        aria-disabled={disabled}
       >
         {children}
-      </a>
+      </button>
     );
   }
+);
 
-  return (
-    <button
-      type={type}
-      onClick={onClick}
-      disabled={disabled}
-      className={classes}
-    >
-      {children}
-    </button>
-  );
-};
+Button.displayName = 'Button';
