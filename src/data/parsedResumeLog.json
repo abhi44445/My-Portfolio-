@@ -1,0 +1,17 @@
+{
+  "parsed": true,
+  "source": "User-provided resume data",
+  "timestamp": "2024-09-14T06:59:00Z",
+  "notes": "Resume data provided directly by user in problem statement. No PDF parsing required.",
+  "completeness": "100%",
+  "fields_extracted": [
+    "name",
+    "title", 
+    "contact",
+    "summary",
+    "skills",
+    "experience",
+    "projects",
+    "education"
+  ]
+}

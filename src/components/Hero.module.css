@@ -1,0 +1,232 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-top: var(--header-height);
+}
+
+.container {
+  max-width: var(--content-wide);
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+  width: 100%;
+  position: relative;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: var(--space-6xl);
+  align-items: start;
+  min-height: 70vh;
+}
+
+.nameSection {
+  position: relative;
+}
+
+.name {
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 12vw, 10rem);
+  font-weight: 400;
+  line-height: 0.85;
+  letter-spacing: -0.05em;
+  color: var(--color-foreground);
+  margin: 0;
+}
+
+.firstName {
+  display: block;
+}
+
+.lastName {
+  display: block;
+  color: var(--color-muted);
+  margin-left: var(--space-lg);
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3xl);
+  padding-top: var(--space-2xl);
+  max-width: 380px;
+}
+
+.titleWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.title {
+  font-family: var(--font-body);
+  font-size: var(--text-lg);
+  font-weight: 500;
+  color: var(--color-foreground);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.location {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  margin: 0;
+}
+
+.summary {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: 1.7;
+  color: var(--color-muted);
+}
+
+.summary p {
+  margin: 0;
+}
+
+.actions {
+  display: flex;
+  gap: var(--space-lg);
+  flex-wrap: wrap;
+}
+
+.scroll {
+  position: absolute;
+  bottom: var(--space-3xl);
+  left: var(--space-lg);
+}
+
+.scrollButton {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-muted);
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.scrollButton:hover {
+  color: var(--color-foreground);
+}
+
+.scrollText {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+.scrollIndicator {
+  width: 1px;
+  height: 60px;
+  background-color: var(--color-border);
+  position: relative;
+  overflow: hidden;
+}
+
+.scrollDot {
+  width: 3px;
+  height: 3px;
+  background-color: var(--color-muted);
+  border-radius: 50%;
+  position: absolute;
+  left: -1px;
+  top: 0;
+  animation: scrollMove 2s ease-in-out infinite;
+}
+
+@keyframes scrollMove {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(57px);
+    opacity: 0;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  .content {
+    grid-template-columns: 1fr 350px;
+    gap: var(--space-4xl);
+  }
+}
+
+@media (max-width: 968px) {
+  .content {
+    grid-template-columns: 1fr;
+    gap: var(--space-3xl);
+    text-align: left;
+  }
+  
+  .details {
+    max-width: 100%;
+    padding-top: var(--space-xl);
+  }
+  
+  .lastName {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .actions {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+  
+  .scroll {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    margin-top: var(--space-3xl);
+  }
+  
+  .scrollButton {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+  
+  .scrollText {
+    writing-mode: horizontal-tb;
+    text-orientation: initial;
+  }
+  
+  .scrollIndicator {
+    width: 60px;
+    height: 1px;
+  }
+  
+  .scrollDot {
+    width: 3px;
+    height: 3px;
+    top: -1px;
+    left: 0;
+    animation: scrollMoveHorizontal 2s ease-in-out infinite;
+  }
+}
+
+@keyframes scrollMoveHorizontal {
+  0%, 100% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(57px);
+    opacity: 0;
+  }
+}
