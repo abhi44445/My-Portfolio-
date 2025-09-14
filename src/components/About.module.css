@@ -1,0 +1,170 @@
+.about {
+  padding: var(--space-6xl) 0;
+  background-color: var(--color-background);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4xl);
+}
+
+.header h2 {
+  font-family: var(--font-display);
+  font-size: var(--text-6xl);
+  font-weight: 400;
+  color: var(--color-foreground);
+  margin-bottom: var(--space-2xl);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4xl) var(--space-5xl);
+}
+
+.bio h3,
+.skills h3,
+.education h3,
+.contact h3 {
+  font-family: var(--font-body);
+  font-size: var(--text-xl);
+  font-weight: 600;
+  color: var(--color-foreground);
+  margin-bottom: var(--space-lg);
+}
+
+.bio p {
+  font-size: var(--text-base);
+  line-height: 1.7;
+  color: var(--color-muted);
+  margin-bottom: var(--space-lg);
+}
+
+.bio p:last-child {
+  margin-bottom: 0;
+}
+
+.skillsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.skill {
+  background-color: rgba(26, 26, 26, 0.05);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: var(--space-xs) var(--space-sm);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-foreground);
+  transition: all var(--duration-fast) var(--ease-out);
+}
+
+.skill:hover {
+  background-color: var(--color-accent);
+  color: var(--color-background);
+  border-color: var(--color-accent);
+}
+
+.educationList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.educationItem h4 {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--color-foreground);
+  margin-bottom: var(--space-xs);
+}
+
+.institution {
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  margin-bottom: var(--space-xs);
+}
+
+.grade,
+.year {
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  margin: 0;
+}
+
+.contactLinks {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.contactLink {
+  font-size: var(--text-base);
+  font-weight: 500;
+  color: var(--color-foreground);
+  text-decoration: none;
+  position: relative;
+  transition: color var(--duration-fast) var(--ease-out);
+  padding: var(--space-xs) 0;
+}
+
+.contactLink::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: var(--color-accent);
+  transform: scaleX(0);
+  transition: transform var(--duration-normal) var(--ease-out);
+}
+
+.contactLink:hover {
+  color: var(--color-accent);
+}
+
+.contactLink:hover::after {
+  transform: scaleX(1);
+}
+
+/* Responsive design */
+@media (max-width: 968px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-3xl);
+  }
+  
+  .header h2 {
+    font-size: var(--text-5xl);
+  }
+}
+
+@media (max-width: 640px) {
+  .about {
+    padding: var(--space-4xl) 0;
+  }
+  
+  .content {
+    gap: var(--space-3xl);
+  }
+  
+  .header h2 {
+    font-size: var(--text-4xl);
+  }
+  
+  .skillsList {
+    gap: var(--space-xs);
+  }
+  
+  .skill {
+    font-size: var(--text-xs);
+    padding: calc(var(--space-xs) * 0.75) var(--space-xs);
+  }
+}

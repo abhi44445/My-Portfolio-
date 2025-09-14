@@ -1,0 +1,91 @@
+{
+  "name": "Abhijeet Santosh Joshi",
+  "mis": "752462015",
+  "title": "MCA | AI & DS | Full Stack Developer",
+  "contact": {
+    "email": "abhijeet789@gmail.com",
+    "phone": "+9197927276488",
+    "location": "Pune, Maharashtra 411030",
+    "github": "https://github.com/aj3434",
+    "website": "https://www.abhijeet1512.com",
+    "whatsapp": ""
+  },
+  "summary": "AI & full-stack developer focused on building production-ready web apps and multimodal AI solutions. Experienced in React, Node, Laravel, MySQL, and building AI chatbots and vision/voice-enabled systems.",
+  "skills": [
+    "Java",
+    "SQL",
+    "JavaScript",
+    "Python",
+    "PHP",
+    "React.js",
+    "Node.js",
+    "Laravel",
+    "MySQL",
+    "Team collaboration",
+    "AI, ML, DL, GenAI"
+  ],
+  "experience": [
+    {
+      "company": "KseminGRC Technologies Pvt Ltd",
+      "role": "Software Developer Intern",
+      "start": "2025-01",
+      "end": "2025-04",
+      "location": "Pune, IN",
+      "bullets": [
+        "Developed an admin dashboard using React.js, Node.js, Laravel, and MySQL to enhance user-company engagement and assessments.",
+        "Planned AI integration for security assessments using deep learning models and Django.",
+        "Designed advanced chatbots with RAG, LLM, and LangChain; contributed modules using Python, PostgreSQL, and low-code platforms."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "MedMind AI: Virtual Doctor with Eyes and Ears",
+      "slug": "medmind-ai",
+      "role": "Lead Developer",
+      "description": "Multimodal AI-powered medical chatbot named 'AI Doctor' integrating vision and voice capabilities. Analyzes medical images and text inputs to provide diagnostic insights and conversational support. Uses Groq/Gradio for multimodal, LLMs for reasoning, and a custom interface.",
+      "tech": ["Python", "Gradio", "LangChain", "LLMs", "Groq", "React", "Node", "MySQL"],
+      "image": "assets/projects/medmind-ai.png"
+    },
+    {
+      "name": "Plant Disease Prediction",
+      "slug": "plant-disease",
+      "role": "ML Developer",
+      "description": "CNN-based deep learning model to analyze and predict plant diseases from leaf photos with a trained model for accurate classification.",
+      "tech": ["Python", "TensorFlow/PyTorch", "OpenCV"],
+      "image": "assets/projects/plant-disease.png"
+    },
+    {
+      "name": "Online Pizza Shopping",
+      "slug": "online-pizza",
+      "role": "Full-stack Developer",
+      "description": "Individual project: full-stack online pizza ordering system built with Java, JSP/Servlet, MySQL, HTML, CSS, and Bootstrap.",
+      "tech": ["Java", "JSP", "MySQL", "HTML", "CSS", "Bootstrap"],
+      "image": "assets/projects/pizza.png"
+    }
+  ],
+  "education": [
+    {
+      "degree": "Pg AI And DS",
+      "institution": "College Of Engineering Pune (Coep), Pune",
+      "year": ""
+    },
+    {
+      "degree": "Master Of Computer Applications",
+      "institution": "Modern College Of Engineering, Pune",
+      "gradScore": ""
+    },
+    {
+      "degree": "BBA(CA)",
+      "institution": "Modern College Pune, Pune",
+      "cgpa": "8.6",
+      "year": "05/2024"
+    }
+  ],
+  "projectGuide": "Prof. Khushal Khairnar",
+  "finalProjectTitle": "MedMind AI: Virtual Doctor with Eyes and Ears",
+  "misc": {
+    "preferredStack": "Vite + React + TypeScript, Laravel backend for APIs if needed",
+    "editor": "VS Code"
+  }
+}

@@ -1,0 +1,5 @@
+User-Agent: *
+Disallow: /api/
+Disallow: /admin/
+
+Sitemap: https://abhijeet1512.com/sitemap.xml
