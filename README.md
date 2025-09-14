@@ -143,15 +143,33 @@ All content is loaded from `src/data/resumeData.json`:
    - Build command: `npm run build`
    - Publish directory: `dist`
 
-### GitHub Pages
+### GitHub Pages (Automated)
 
-1. **Build and Deploy**:
+This repository is configured for automatic deployment to GitHub Pages using GitHub Actions.
+
+1. **Enable GitHub Pages**:
+   - Go to your repository settings
+   - Navigate to "Pages" in the sidebar
+   - Set source to "GitHub Actions"
+
+2. **Automatic Deployment**:
+   - Push changes to the `main` branch
+   - GitHub Actions will automatically build and deploy
+   - Site will be available at: `https://yourusername.github.io/My-Portfolio-/`
+
+3. **Manual Deployment** (if needed):
    ```bash
    npm run build
    git add dist -f
    git commit -m "Deploy to GitHub Pages"
    git subtree push --prefix dist origin gh-pages
    ```
+
+The workflow automatically:
+- Installs dependencies
+- Runs linting and tests
+- Builds the project
+- Deploys to GitHub Pages
 
 ## 🔧 Configuration
 
