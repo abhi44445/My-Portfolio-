@@ -1,2 +1,2 @@
 # My-Portfolio-
-Miranda Paper Portfolio
+Abhijeet Joshi Portfolio
